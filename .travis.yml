@@ -1,5 +1,11 @@
 language: java
 jdk:
     -openjdk8
+addons:
+    sonarcloud:
+    organization: ferra-rally
+    token:
+        secure: 877d5588f4ef1c931e16a275662f0b8764b3844c
 script: 
     - ant build 
+    - sonar-scanner
